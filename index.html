@@ -81,7 +81,7 @@ span{
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="aboutme">
     <h2 class="w3-wide">Almond</h2>
     <img src="img/almond.jpg" alt="Table" style="width:100%;max-width:500px" class="w3-center w3-circle w3-grayscale-min"> 
-    <h3 class="w3-opacity w3-text-"><i>I am a web developer, teacher, freelancer, gamer</i></h3>
+    <h3 class="w3-opacity w3-text-black"><i>I am a web developer, teacher, freelancer, gamer</i></h3>
     <p class="w3-justify w3-center w3-wide">Hello! My name is Almond, I like cats and dogs, I always want to play games with my family, friends and random people online. My favorite food is Sushi, I love drinking coffee, I don't like spiders and snakes.<br> Connect with me!</p>
     <div class="w3-row w3-padding-32">
       <div class="w3-center">
@@ -118,32 +118,53 @@ span{
      
       <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
         <div class="w3-third w3-margin-bottom">
-           <img src="img/boardgaming.jpg" alt="Boardgaming" style="width:100%;" class="w3-hover-sepia w3-animate-zoom zoom">
+           <img src="img/boardgaming.jpg" alt="Boardgaming" style="width:100%;cursor:zoom-in" onclick="document.getElementById('modal01').style.display='block'" class="w3-hover-sepia  w3-animate-zoom zoom">
+           <div id="modal01" class="w3-modal w3-center" onclick="this.style.display='none'">
+            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+            <div class="w3-modal-content w3-animate-zoom w3-padding-large w3-center " style="width:80%; max-width:800px">
+              <img src="img/boardgaming.jpg" style="width:80%"> 
+            </div>
+          </div>
           <div class="w3-container w3-white">
-            <p><b>Boardgames</b></p>
-            <p class="w3-center">I really like playing board games. One thing that I like the most about playing board games is that, I get to meet new people and play new games. I learned a lot of things from playing board games. It taught me how to respond to different situations in real life that is like in the game board, it taught me a lot of ideas on how to tackle the randomness of life in general. I also got a chance to meet awesome friends.
+            <p><b class="w3-display-container">Boardgames</b></p>
+            <p id="show1" class="w3-center">I really like playing board games...</p>
+            <p id="hide1" class="w3-hide w3-center">I really like playing board games. .One thing that I like the most about playing board games is that, I get to meet new people and play new games. I learned a lot of things from playing board games. It taught me how to make good decisions that I can apply in the real world,  I also got a chance to meet awesome friends.
              </p>
-            <button class="w3-button w3-right w3-black w3-margin-bottom" onclick="window.location.href='soon.html'">Read More</button>
+            <button class="w3-button w3-right w3-black w3-margin-bottom" onclick="readmore(hide1,show1)">Read More</button>
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
-          <img src="img/aov.jpg" alt="aov" style="width:100%;" class="w3-hover-sepia w3-animate-zoom zoom">
+          <img src="img/aov.jpg" alt="aov" style="width:100%;" style="width:100%;cursor:zoom-in" onclick="document.getElementById('modal02').style.display='block'" class="w3-hover-sepia  w3-animate-zoom zoom">
+          <div id="modal02" class="w3-modal w3-center" onclick="this.style.display='none'">
+            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+            <div class="w3-modal-content w3-animate-zoom w3-padding-large w3-center " style="width:80%; max-width:800px">
+              <img src="img/aov.jpg" style="width:80%"> 
+            </div>
+          </div>
           <div class="w3-container w3-white">
             <p><b>Gaming</b></p>
             <p class="w3-opacity"></p>
-            <p class="w3-center">I play a lot of games in PC. I usually play League of Legends and those alike in mobile version (mobile league, arena of valor and etc.)
+            <p id="show2" class="w3-center">I play a lot of games in PC. I usually play League of Legends and ....</p>
+            <p id="hide2" class="w3-hide w3-center">I play a lot of games in PC. I usually play League of Legends and those alike in mobile version (mobile league, arena of valor and etc.)
             I play with my friends in the Philippines and sometimes I play with my japanese friends here online. I play sometimes in steam. Since gaming is not
             yet popular here. I teach my friends how to enjoy and play games like gamers do.  </p>
-            <button class="w3-button w3-right w3-black w3-margin-bottom" onclick="window.location.href='soon.html'">Read More</button>
+            <button class="w3-button w3-right w3-black w3-margin-bottom" onclick="readmore(hide2,show2)">Read More</button>
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
-          <img src="img/adventure.jpg" alt="adventure" style="width:100%" class="w3-hover-sepia w3-animate-zoom zoom">
+          <img src="img/adventure.jpg" alt="adventure" style="width:100%;cursor:zoom-in" onclick="document.getElementById('modal03').style.display='block'" class="w3-hover-sepia  w3-animate-zoom zoom">
+          <div id="modal03" class="w3-modal w3-center" onclick="this.style.display='none'">
+            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+              <div class="w3-modal-content w3-animate-zoom w3-padding-large w3-center " style="width:80%; max-width:800px">
+                <img src="img/adventure.jpg" style="width:80%"> 
+              </div>
+          </div>
           <div class="w3-container w3-white">
             <p><b>Random</b></p>
             <p class="w3-opacity"></p>
-            <p class="w3-center">Im having fun hanging out with different friends in sight seeing places in Japan. I am living in Kansai so most of my trips are going to Kyoto, Osaka, Kobe and a lot more. In this picture, I went to a Miki   </p>
-            <button class="w3-button w3-right w3-black w3-margin-bottom" onclick="window.location.href='soon.html'">Read More</button>
+            <p id="show3" class="w3-center">Im having fun hanging out with different friends . . .</p>
+            <p id="hide3" class="w3-hide w3-center">Im having fun hanging out with different friends in sight seeing places in Japan. I am living in Kansai so most of my trips are going to Kyoto, Osaka, Kobe and a lot more. In this picture, I went to a Miki   </p>
+            <button class="w3-button w3-right w3-black w3-margin-bottom" onclick="readmore(hide3,show3)">Read More</button>
           </div>
         </div>
       </div>
@@ -171,7 +192,7 @@ span{
             </div>
           </div>
           <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-          <button class="w3-button w3-black w3-section w3-right" onclick="window.location.href='soon.html'">SEND</button>
+          <button class="w3-button w3-black w3-section w3-right" type="submit" onclick="window.location.href='send_mail.php'">SEND</button>
         </form>
       </div>
     </div>
@@ -241,11 +262,21 @@ function myFunction() {
 }
 
 // When the user clicks anywhere outside of the modal, close it
-var modal = document.getElementById('ticketModal');
+var modal = document.getElementById('Modal');
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+}
+
+function readmore(x,y) {
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        y.className += " w3-hide";
+    } else {
+        x.className = x.className.replace(" w3-show", " w3-hide");
+        y.className = x.className.replace(" w3-hide", " w3-show");
+    }
 }
 
 </script>
