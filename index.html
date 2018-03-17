@@ -3,6 +3,7 @@
 <title>CVI</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="css/w3.css">
 <link rel="stylesheet" href="css/font.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -39,7 +40,7 @@ span{
     <a href="#aboutme" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT ME</a>
     <a href="#blog" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BLOG</a>
     <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
-    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+    <a href="#translate" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="material-icons" style="font-size:20px">public</i></a>
   </div>
 </div>
 
@@ -48,6 +49,7 @@ span{
   <a href="#aboutme" class="w3-bar-item w3-button w3-padding-large">ABOUT ME</a>
   <a href="#blog" class="w3-bar-item w3-button w3-padding-large">BLOG</a>
   <a href="#contact" class="w3-bar-item w3-button w3-padding-large">CONTACT</a>
+  <a href="#translate"  class="w3-bar-item w3-button w3-padding-large">TRANSLATE</a>
 </div>
 
 <!-- Page content -->
@@ -127,8 +129,8 @@ span{
           </div>
           <div class="w3-container w3-white">
             <p><b class="w3-display-container">Boardgames</b></p>
-            <p id="show1" class="w3-center">I really like playing board games...</p>
-            <p id="hide1" class="w3-hide w3-center">I really like playing board games. .One thing that I like the most about playing board games is that, I get to meet new people and play new games. I learned a lot of things from playing board games. It taught me how to make good decisions that I can apply in the real world,  I also got a chance to meet awesome friends.
+            <p id="show1" class="w3-center">You just need some roll of a dice...</p>
+            <p id="hide1" class="w3-hide w3-center">Sometimes we just have to play and forget about the real world. We are so busy with a lot of things. That we forget to enjoy the simple things like having fun. Playing boardgames gave me an opportunity to communicate to different people and gave me a lot of different views on life. I learned a lot from playing games in general. I hope you can also explore and enjoy playing board games. I like to share my love of playing board games.
              </p>
             <button class="w3-button w3-right w3-black w3-margin-bottom" onclick="readmore(hide1,show1)">Read More</button>
           </div>
@@ -145,9 +147,7 @@ span{
             <p><b>Gaming</b></p>
             <p class="w3-opacity"></p>
             <p id="show2" class="w3-center">I play a lot of games in PC. I usually play League of Legends and ....</p>
-            <p id="hide2" class="w3-hide w3-center">I play a lot of games in PC. I usually play League of Legends and those alike in mobile version (mobile league, arena of valor and etc.)
-            I play with my friends in the Philippines and sometimes I play with my japanese friends here online. I play sometimes in steam. Since gaming is not
-            yet popular here. I teach my friends how to enjoy and play games like gamers do.  </p>
+            <p id="hide2" class="w3-hide w3-center">I play a lot of games on PC. I usually play League of Legends and those alike in the mobile version (mobile league, arena of valor and etc.) I play with my friends in the Philippines and sometimes I play with my Japanese friends here online. I play sometimes on steam. Since gaming is not yet popular here. I teach my friends how to enjoy and play games like gamers do. Let's play sometime!  </p>
             <button class="w3-button w3-right w3-black w3-margin-bottom" onclick="readmore(hide2,show2)">Read More</button>
           </div>
         </div>
@@ -160,10 +160,10 @@ span{
               </div>
           </div>
           <div class="w3-container w3-white">
-            <p><b>Random</b></p>
+            <p><b>Adventure</b></p>
             <p class="w3-opacity"></p>
             <p id="show3" class="w3-center">Im having fun hanging out with different friends . . .</p>
-            <p id="hide3" class="w3-hide w3-center">Im having fun hanging out with different friends in sight seeing places in Japan. I am living in Kansai so most of my trips are going to Kyoto, Osaka, Kobe and a lot more. In this picture, I went to a Miki   </p>
+            <p id="hide3" class="w3-hide w3-center">I'm having fun hanging out with different friends in sightseeing places in Japan. I am living in Kansai so most of my trips are going to Kyoto, Osaka, Kobe and a lot more. In this picture, I went to a Miki City, Hyogo. Miki City is a province. It's quiet and peaceful. If you enjoy going to hiking, skiing, or nature. You should try to visit Miki City.  </p>
             <button class="w3-button w3-right w3-black w3-margin-bottom" onclick="readmore(hide3,show3)">Read More</button>
           </div>
         </div>
@@ -224,16 +224,26 @@ To use this code on your website, get a free API key from Google.
 Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 -->
 
+
+
+      
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-steam-square"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-
-  
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-steam-square w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
 </footer>
-
+<div class="w3-black  w3-center" id="translate">
+  <div class="w3-container w3-content w3-padding-small" style="">
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </div>
+<div>
 <script>
   // Automatic Slideshow - change image every 4 seconds
 var myIndex = 0;
