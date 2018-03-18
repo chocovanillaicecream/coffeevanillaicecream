@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
+<head>
 <title>CVI</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel= "stylesheet" href="css/w3.css">
 <link rel="stylesheet" href="css/font.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
 
 .zoom {
     transition: transform .2s;
-
 }
-
 .zoom:hover {
     -ms-transform: scale(1.5); /* IE 9 */
     -webkit-transform: scale(1.5); /* Safari 3-8 */
@@ -27,8 +28,8 @@ span{
     color:chocolate;
     font-size: 13px;
 }
-
 </style>
+</head>
 <body>
 
 <!-- Navbar -->
@@ -182,16 +183,16 @@ span{
         <i class="fa fa-envelope" style="width:30px"> </i>almondyseth.sato@gmail.com<br>
       </div>
       <div class="w3-col m6">
-        <form action="contact_me.php" method="post">
+        <form id="form_contact" autocomplete="on">
           <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
             <div class="w3-half">
-              <input name="name" class="w3-input w3-border" type="text" placeholder="Name" required name="name">
+              <input name="name" class="w3-input w3-border" type="text" placeholder="Name" required name="name" autocomplete="name">
             </div>
             <div class="w3-half">
-              <input name="email" class="w3-input w3-border" type="text" placeholder="Email" required name="email">
+              <input name="email" class="w3-input w3-border" type="text" placeholder="Email" required name="email" autocomplete="off">
             </div>
-          </div>
-          <input name="message" class="w3-input w3-border" type="text" placeholder="Message" required name="message">
+          </div> 
+          <input name="message" class="w3-input w3-border" type="text" placeholder="Message" required name="message" autocomplete="on">
           <input class="w3-button w3-black w3-section w3-right" type="submit" value="send">
         </form>
       </div>
@@ -201,10 +202,10 @@ span{
 <!-- End Page Content -->
 </div>
 <!-- Add Google Maps -->
-<div id="googleMaps" style="height:400px;" class="w3-grayscale-max"></div>
+<div id="googleMap" style="height:400px;" class="w3-grayscale-max"></div>
 <script>
 function myMap() {
-  myCenter=new google.maps.LatLng(41.878114, -87.629798);
+  myCenter=new google.maps.LatLng(34.69374, 135.50218);
   var mapOptions= {
     center:myCenter,
     zoom:12, scrollwheel: false, draggable: false,
@@ -218,7 +219,7 @@ function myMap() {
   marker.setMap(map);
 }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnXVpTXOde6q9jBv2ocaUx2dFK_V6h17M&callback=myMap"></script>
 <!--
 To use this code on your website, get a free API key from Google.
 Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
@@ -226,14 +227,13 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-facebook-official w3-hover-opacity"></i >
   <i class="fa fa-instagram w3-hover-opacity"></i>
   <i class="fa fa-steam-square"></i>
   <i class="fa fa-twitter w3-hover-opacity"></i>
 
   
 </footer>
-
 <script>
   // Automatic Slideshow - change image every 4 seconds
 var myIndex = 0;
@@ -280,6 +280,65 @@ function readmore(x,y) {
 }
 
 </script>
+<script>
+$(document).ready(function(){
+  // Variable to hold request
+  var request;
 
+  // Bind to the submit event of our form
+  $("#form_contact").submit(function(event){
+  // Prevent default posting of form - put here to work in case of errors
+  event.preventDefault();
+
+  // Abort any pending request1
+  if (request) {
+      request.abort();
+  }
+  // setup some local variables
+  var $form = $(this);
+  // Let's select and cache all the fields
+  var $inputs = $form.find("input, select, button, textarea");
+  // Serialize the data in the form
+  var serializedData = $form.serialize();
+  // Let's disable the inputs for the duration of the Ajax request.
+  // Note: we disable elements AFTER the form data has been serialized.
+  // Disabled form elements will not be serialized.
+  $inputs.prop("disabled", true);
+
+  // Fire off the request to /form.php
+  request = $.ajax({
+      url: 'php/contact_me.php',
+      type: 'post',
+      data: serializedData
+  });
+
+  // Callback handler that will be called on success
+  request.done(function (response, textStatus, jqXHR){
+      // Log a message to the console
+      alert("We will contact you soon!"); 
+      console.log("Hooray, it worked!");
+  });
+
+  // Callback handler that will be called on failure
+  request.fail(function (jqXHR, textStatus, errorThrown){
+      // Log the error to the console
+      console.error(
+          "The following error occurred: "+
+          textStatus, errorThrown
+      );
+  });
+
+  // Callback handler that will be called regardless
+  // if the request failed or succeeded
+  request.always(function () {
+      // Reenable the inputs
+      $inputs.prop("disabled", false);
+  });
+  
+
+  });
+  
+});
+</script>
 </body>
 </html>
