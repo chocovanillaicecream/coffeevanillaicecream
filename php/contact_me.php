@@ -13,6 +13,11 @@
 	$headers = "From: admin@coffeevanillaicecream.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 	$headers .= "Reply-To: $email_address";   
 	mail($to,$email_subject,$email_body,$headers);
-
+	$headers = "From: almond.sato@coffeevanillaicecream.com\n";
+	 // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
+	$headers .= "Reply-To: $to"; 
+	$email_subject = "Thanks!";
+	$email_body = "Dear Mr/Ms $name, Thank you for sending your contact information. \n We will get back to you soon";
+    mail($email_address,$email_subject,$email_body,$headers);
 	return true;         
 	?>
