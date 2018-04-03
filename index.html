@@ -14,6 +14,7 @@
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
+.mySlides2 {}
 
 .zoom {
     transition: transform .2s;
@@ -42,11 +43,12 @@ span{
     <a href="#aboutme" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT ME</a>
     <a href="#blog" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BLOG</a>
     <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <a href="http://almondsato.com" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RESUME</a>
     <a href="#translate" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="material-icons" style="font-size:20px">public</i></a>
   </div>
 </div>
 
-<!-- Navbar on small screens -->
+<!--  Navbar on small screens -->
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
   <a href="#aboutme" class="w3-bar-item w3-button w3-padding-large">ABOUT ME</a>
   <a href="#blog" class="w3-bar-item w3-button w3-padding-large">BLOG</a>
@@ -112,61 +114,59 @@ span{
 </div>
   
   <!-- The blog Section -->
-  <div class="w3-black" id="blog">
-    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-      <h2 class="w3-bottombar w3-wide w3-center">BLOG</h2>
+  <div class="w3-" id="blog">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
+      <h2 class="w3-wide w3-center">BLOG</h2>
       <p class="w3-center"><i>Don't forget to share it with your friends!</i></p><br>
    
-      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-        <div class="w3-third w3-margin-bottom">
-           <img src="img/boardgaming.jpg" alt="Boardgaming" style="width:100%;cursor:zoom-in" onclick="document.getElementById('modal01').style.display='block'" class="w3-hover-sepia  w3-animate-zoom zoom">
-           <div id="modal01" class="w3-modal w3-center" onclick="this.style.display='none'">
-            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-            <div class="w3-modal-content w3-animate-zoom w3-padding-large w3-center " style="width:80%; max-width:800px">
-              <img src="img/boardgaming.jpg" style="width:80%"> 
+          <div class="w3-container w3-black">
+            <div class="w3-container w3-center ">
+            <h2>Boardgame</h2>
+            <p>Sometimes we just have to play and forget about the real world. We are so busy with a lot of things. That we forget to enjoy the simple things like having fun. Playing board games gave me an opportunity to communicate to different people and gave me a lot of different views on life. I learned a lot from playing games in general. I hope you can also explore and enjoy playing board games. I like to share my love of playing board games.</p>
             </div>
-          </div>
-          <div class="w3-container w3-white">
-            <p><b class="w3-display-container">Boardgames</b></p>
-            <p id="show1" class="w3-center">You just need some roll of a dice...</p>
-            <p id="hide1" class="w3-hide w3-center">Sometimes we just have to play and forget about the real world. We are so busy with a lot of things. That we forget to enjoy the simple things like having fun. Playing board games gave me an opportunity to communicate to different people and gave me a lot of different views on life. I learned a lot from playing games in general. I hope you can also explore and enjoy playing board games. I like to share my love of playing board games.
-             </p>
-            <button class="w3-button w3-right w3-black w3-margin-bottom" onclick="readmore(hide1,show1)">Read More</button>
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="img/aov.jpg" alt="aov" style="width:100%;" style="width:100%;cursor:zoom-in" onclick="document.getElementById('modal02').style.display='block'" class="w3-hover-sepia  w3-animate-zoom zoom">
-          <div id="modal02" class="w3-modal w3-center" onclick="this.style.display='none'">
-            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-            <div class="w3-modal-content w3-animate-zoom w3-padding-large w3-center " style="width:80%; max-width:800px">
-              <img src="img/aov.jpg" style="width:80%"> 
+
+          <div class="w3-content w3-display-container w3-padding-small">
+            <div class="w3-display-container mySlides2">
+              <img src="img/spiceroad.jpeg" style="width:100%">
+                <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                  Century Spice Road: Cool game, interesting mechanics, and beautiful art.
+                </div>
             </div>
+            <div class="w3-display-container mySlides2">
+              <img src="img/nyankonarabe.jpg" style="width:100%">
+                <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                  Nyanko Narabe (5 in a row): Cute pawns, simple mechanics with a cliche
+                </div>
+            </div>
+            <div class="w3-display-container mySlides2">
+              <img src="img/roll_ages.jpg" style="width:100%">
+                <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                  Roll Throught the ages: Pen and Paper type game with dice rolling, and resource management.
+                </div>
+            </div>
+            <div class="w3-display-container mySlides2">
+              <img src="img/takenoko.jpg" style="width:100%">
+                <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                  Takenoko: Cute characters, simple mechanics, co-operation with secret objectives.
+                </div>
+            </div>
+            <div class="w3-display-container mySlides2">
+              <img src="img/skulls.jpg" style="width:100%">
+                <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                  Skulls: Beatiful art, simple mechanics, bluffing game, and risk taking game. 
+                </div>
+            </div>
+            <div class="w3-display-container mySlides2">
+              <img src="img/skulls.jpg" style="width:100%">
+                <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                  Skulls: Beatiful art, simple mechanics, bluffing game, and risk taking game. 
+                </div>
+            </div>
+
+            <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
           </div>
-          <div class="w3-container w3-white">
-            <p><b>Gaming</b></p>
-            <p class="w3-opacity"></p>
-            <p id="show2" class="w3-center">I play a lot of games in PC. I usually play League of Legends and ....</p>
-            <p id="hide2" class="w3-hide w3-center">I play a lot of games on PC. I usually play League of Legends and those alike in the mobile version (mobile league, arena of valor and etc.) I play with my friends in the Philippines and sometimes I play with my Japanese friends here online. I play sometimes on steam. Since gaming is not yet popular here. I teach my friends how to enjoy and play games like gamers do. Let's play sometime!  </p>
-            <button class="w3-button w3-right w3-black w3-margin-bottom" onclick="readmore(hide2,show2)">Read More</button>
           </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="img/adventure.jpg" alt="adventure" style="width:100%;cursor:zoom-in" onclick="document.getElementById('modal03').style.display='block'" class="w3-hover-sepia  w3-animate-zoom zoom">
-          <div id="modal03" class="w3-modal w3-center" onclick="this.style.display='none'">
-            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-              <div class="w3-modal-content w3-animate-zoom w3-padding-large w3-center " style="width:80%; max-width:800px">
-                <img src="img/adventure.jpg" style="width:80%"> 
-              </div>
-          </div>
-          <div class="w3-container w3-white">
-            <p><b>Adventure</b></p>
-            <p class="w3-opacity"></p>
-            <p id="show3" class="w3-center">Im having fun hanging out with different friends . . .</p>
-            <p id="hide3" class="w3-hide w3-center">I'm having fun hanging out with different friends in sightseeing places in Japan. I am living in Kansai so most of my trips are going to Kyoto, Osaka, Kobe and a lot more. In this picture, I went to a Miki City, Hyogo. Miki City is a province. It's quiet and peaceful. If you enjoy going to hiking, skiing, or nature. You should try to visit Miki City.  </p>
-            <button class="w3-button w3-right w3-black w3-margin-bottom" onclick="readmore(hide3,show3)">Read More</button>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -246,6 +246,30 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 </div>
 
 <script>
+// manual slideshow
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides2");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+
+
+
+
+
   // Automatic Slideshow - change image every 4 seconds
 var myIndex = 0;
 carousel();

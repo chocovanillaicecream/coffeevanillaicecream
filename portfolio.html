@@ -6,7 +6,19 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD_7bOuraI3-U4jBeNKSJp_-WtMlU-wpd0",
+    authDomain: "my-portfolio-31ce7.firebaseapp.com",
+    databaseURL: "https://my-portfolio-31ce7.firebaseio.com",
+    projectId: "my-portfolio-31ce7",
+    storageBucket: "my-portfolio-31ce7.appspot.com",
+    messagingSenderId: "813456443868"
+  };
+  firebase.initializeApp(config);
+</script>
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 </style>
@@ -88,11 +100,13 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-cyan"></i>Work Experience</h2>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Language Consulant</b></h5>
-          <h6 class="w3-text-cyan"><i class="fa fa-calendar fa-fw w3-margin-right"></i>March 2016 - March 2018 <span class="w3-tag w3-cyan w3-round">Current</span></h6>
+          <h6 class="w3-text-cyan"><i class="fa fa-calendar fa-fw w3-margin-right"></i>March 2016 - March 2018 <span class="w3-tag w3-cyan w3-round">Recent</span></h6>
           <p>Training Teachers, teaching English in Japan (kindergarten to junior high school) , providing games and activites for kids, improving the way of teaching English in Japan.</p>
           <hr>
-        </div>
-        <div class="w3-container">
+          <h5 class="w3-opacity"><b>International English Teacher</b></h5>
+          <h6 class="w3-text-cyan"><i class="fa fa-calendar fa-fw w3-margin-right"></i>June 2015 - March 2018 <span class="w3-tag w3-cyan w3-round">Current</span></h6>
+          <p>Training Teachers, teaching English in Japan (International Pre-school) , giving activities, games, and homeworks using purely English.</p>
+          <hr>
           <h5 class="w3-opacity"><b>Junior Systems Administrator</b></h5>
           <h6 class="w3-text-cyan"><i class="fa fa-calendar fa-fw w3-margin-right"></i>August 2014 -  March 2015</h6>
           <p>Managed different content management system or CMS for the company and for its clients. Handled databases of games/application/sites of the company. Implement, fix, and improve the functions of the existing system of client provided systems. </p>
@@ -127,7 +141,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 <footer class="w3-container w3-cyan w3-center w3-margin-top">
   <p>Find me on social media.</p>
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <a href="//www.facebook.com/coffeevanillaicecream"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
   <i class="fa fa-instagram w3-hover-opacity"></i>
   <i class="fa fa-snapchat w3-hover-opacity"></i>
   <i class="fa fa-pinterest-p w3-hover-opacity"></i>
